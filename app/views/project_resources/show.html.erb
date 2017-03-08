@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @project_resource.project %>
+</p>
+
+<p>
+  <strong>Resource:</strong>
+  <%= @project_resource.resource %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @project_resource.order %>
+</p>
+
+<%= link_to 'Edit', edit_project_resource_path(@project_resource) %> |
+<%= link_to 'Back', project_resources_path %>

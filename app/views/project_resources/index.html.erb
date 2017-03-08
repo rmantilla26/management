@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Project Resources</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Resource</th>
+      <th>Order</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @project_resources.each do |project_resource| %>
+      <tr>
+        <td><%= project_resource.project %></td>
+        <td><%= project_resource.resource %></td>
+        <td><%= project_resource.order %></td>
+        <td><%= link_to 'Show', project_resource %></td>
+        <td><%= link_to 'Edit', edit_project_resource_path(project_resource) %></td>
+        <td><%= link_to 'Destroy', project_resource, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Project resource', new_project_resource_path %>
